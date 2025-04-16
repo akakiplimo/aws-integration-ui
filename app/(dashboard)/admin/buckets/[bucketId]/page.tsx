@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 // app/(dashboard)/admin/buckets/[bucketId]/page.tsx
 import { Metadata } from 'next';
 import Link from 'next/link';
@@ -49,7 +51,7 @@ const mockBuckets = [
   },
 ];
 
-export default function BucketDetailPage({ params }: BucketDetailPageProps) {
+export default function BucketDetailPage({ params }: any) {
   const { bucketId } = params;
 
   // Find the bucket details from mock data

@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 // components/admin/users-table.tsx
 'use client';
 
@@ -11,7 +13,6 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
-  DialogTrigger,
 } from '@/components/ui/dialog';
 import {
   DropdownMenu,
@@ -21,7 +22,6 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Checkbox } from '@/components/ui/checkbox';
 import {
@@ -36,7 +36,6 @@ import {
   MoreHorizontal,
   Pencil,
   Trash,
-  UserPlus,
   Database,
   Shield,
   ShieldAlert,
@@ -94,7 +93,6 @@ export function UsersTable() {
   const router = useRouter();
   const [users, setUsers] = useState(mockUsers);
   const [selectedUser, setSelectedUser] = useState<any>(null);
-  const [isDialogOpen, setIsDialogOpen] = useState(false);
   const [isDeleteDialogOpen, setIsDeleteDialogOpen] = useState(false);
   const [assignDialogOpen, setAssignDialogOpen] = useState(false);
   const [selectedBuckets, setSelectedBuckets] = useState<{

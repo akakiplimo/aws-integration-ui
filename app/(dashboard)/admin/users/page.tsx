@@ -17,28 +17,7 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table';
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuTrigger,
-} from '@/components/ui/dialog';
-import {
-  Plus,
-  Search,
-  MoreHorizontal,
-  Download,
-  Trash,
-  Edit,
-  UserPlus,
-  Shield,
-  ShieldAlert,
-  CheckCircle2,
-  Database,
-  Users,
-  Filter,
-} from 'lucide-react';
+import { Plus, Search, Download, Database, Users, Filter } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { UsersTable } from '@/components/admin/users-table';
 

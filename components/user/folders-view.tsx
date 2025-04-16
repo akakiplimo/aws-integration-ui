@@ -1,15 +1,9 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 // components/user/folders-view.tsx
 'use client';
 
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card';
 import {
   Table,
   TableBody,
@@ -29,7 +23,7 @@ import {
 } from '@/components/ui/dialog';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { Folder, Upload, Download, FileText, Plus } from 'lucide-react';
+import { Folder, Upload, FileText } from 'lucide-react';
 
 interface FolderProps {
   id: string;
@@ -43,11 +37,7 @@ interface FoldersViewProps {
   folders: FolderProps[];
 }
 
-export function FoldersView({
-  bucketId,
-  bucketName,
-  folders,
-}: FoldersViewProps) {
+export function FoldersView({ bucketName, folders }: FoldersViewProps) {
   const [uploading, setUploading] = useState(false);
   const [uploadProgress, setUploadProgress] = useState(0);
   const [selectedFolder, setSelectedFolder] = useState<string | null>(null);

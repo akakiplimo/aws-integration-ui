@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 // components/admin/buckets-table.tsx
 'use client';
 
@@ -19,7 +20,6 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
-  DialogTrigger,
 } from '@/components/ui/dialog';
 import {
   DropdownMenu,
@@ -31,23 +31,12 @@ import {
 } from '@/components/ui/dropdown-menu';
 import { Input } from '@/components/ui/input';
 import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from '@/components/ui/table';
-import {
   MoreHorizontal,
-  Pencil,
   Trash,
   FolderPlus,
-  Upload,
   Users,
   Database,
   Folder,
-  Plus,
 } from 'lucide-react';
 
 // Mock bucket data

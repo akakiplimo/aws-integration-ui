@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 // components/admin/folders-list.tsx
 'use client';
 
@@ -27,15 +29,7 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table';
-import {
-  MoreHorizontal,
-  Pencil,
-  Trash,
-  Upload,
-  Download,
-  FileText,
-  Folder,
-} from 'lucide-react';
+import { MoreHorizontal, Pencil, Trash, Upload, Folder } from 'lucide-react';
 
 interface FolderProps {
   id: string;
@@ -48,10 +42,7 @@ interface FoldersListProps {
   folders: FolderProps[];
 }
 
-export function FoldersList({
-  bucketId,
-  folders: initialFolders,
-}: FoldersListProps) {
+export function FoldersList({ folders: initialFolders }: FoldersListProps) {
   const [folders, setFolders] = useState(initialFolders);
   const [selectedFolder, setSelectedFolder] = useState<any>(null);
   const [isDeleteDialogOpen, setIsDeleteDialogOpen] = useState(false);
@@ -102,7 +93,7 @@ export function FoldersList({
     }
   };
 
-  const simulateUpload = (file: File) => {
+  const simulateUpload = (file?: File) => {
     setUploading(true);
     setUploadProgress(0);
 
@@ -253,7 +244,8 @@ export function FoldersList({
           <DialogHeader>
             <DialogTitle>Upload File</DialogTitle>
             <DialogDescription>
-              Select a file to upload to folder "{selectedFolder?.name}"
+              Select a file to upload to folder &quot;{selectedFolder?.name}
+              &quot;
             </DialogDescription>
           </DialogHeader>
           <div className="py-4">

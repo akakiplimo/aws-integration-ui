@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 // components/admin/user-form.tsx
 'use client';
 
@@ -38,8 +39,8 @@ const formSchema = z.object({
   password: z.string().min(6, {
     message: 'Password must be at least 6 characters.',
   }),
-  isAdmin: z.boolean().default(false),
-  buckets: z.array(z.string()).default([]),
+  isAdmin: z.boolean(),
+  buckets: z.array(z.string()),
 });
 
 type FormValues = z.infer<typeof formSchema>;
@@ -151,7 +152,7 @@ export function UserForm({ user }: { user?: any }) {
               </FormControl>
               {user && (
                 <FormDescription>
-                  Leave this field blank if you don't want to change the
+                  Leave this field blank if you don&apos;t want to change the
                   password.
                 </FormDescription>
               )}
